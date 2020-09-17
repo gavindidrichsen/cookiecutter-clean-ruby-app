@@ -1,0 +1,9 @@
+use_ruby
+
+PATH_add .env/aliases
+PATH_add ./bin
+
+# Set magic variables for current file & dir
+__dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export LOCAL_DIR="${__dir}"
+export REMOTE_DIR="<USERNAME@REMOTE_HOST>"

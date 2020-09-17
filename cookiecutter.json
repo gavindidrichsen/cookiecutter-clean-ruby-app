@@ -2,11 +2,11 @@
   "gem_name": "",
   "module_name" : "{{cookiecutter.gem_name.capitalize()}}",
   "version": "0.1.0",
-  "github_user" : "emeve89",
+  "github_user" : "gavindidrichsen",
   "repo_name": "{{cookiecutter.gem_name}}",
   "app_title": "",
   "short_description": "",
   "summary": "",
-  "author_name": "Mario Esteban Viapiano",
-  "author_email": "marioeviapiano@gmail.com"
+  "author_name": "Gavin Didrichsen",
+  "author_email": "gavin.didrichsen@gmail.com"
 }

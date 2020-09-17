@@ -1,6 +1,6 @@
 module {{cookiecutter.module_name}}
-  module Entities
-    class Entity
+  module Infrastructures
+    class Infrastructure
     end
   end
 end

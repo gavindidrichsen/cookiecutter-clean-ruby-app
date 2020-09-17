@@ -12,13 +12,47 @@ gem '{{cookiecutter.gem_name}}'
 
 And then execute:
 
-    $ bundle
+```bash
+> bundle
+```
 
 Or install it yourself as:
 
-    $ gem install {{cookiecutter.gem_name}}
+```bash
+> gem install {{cookiecutter.gem_name}}
+```
 
 ## Usage
+
+First ensure that direnv is configured on your local machine so that the presence of a .envrc file will automatically trigger environment setup.
+
+### Setup .envrc
+
+Copy .envrc_sample to .envrc and update accordingly.  Only if you are working with a remote host, then set the REMOTE_DIR to ensure that upload and download of all files can be achieved with the helper script in ./bin/transfer_files.
+
+Run ``direnv allow`` to setup the environment.
+
+
+If a remote host is being used, then transfer all local files to the host using ``transfer_files upload``.  To download files on the remote host, then ``transfer_files download``.  Both of these will start a local daemon that will continue to transfer changes.  In the case of the upload, then the fswatch on Mac will listen for changes and then do the upload only when changes are saved.  In the case of the download, rsync will be run every 10 seconds to pull down the remote changes.
+
+Run ``setup`` to install all the required gems locally.  If you see and error like the following, make sure to upgrade your bundler with ``gem install bundler`` and then re-run ``setup``
+
+```bash
+...
+...
+Resolving dependencies...
+Bundler could not find compatible versions for gem "bundler":
+  In Gemfile:
+    bundler (~> 2.0)
+
+  Current Bundler version:
+    bundler (1.17.2)
+This Gemfile requires a different version of Bundler.
+Perhaps you need to update Bundler by running `gem install bundler`?
+
+Could not find gem 'bundler (~> 2.0)' in any of the relevant sources:
+  the local ruby installation
+```
 
 TODO: Write usage instructions here
 
