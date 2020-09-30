@@ -1,6 +1,6 @@
 use_ruby
 
-PATH_add .env/aliases
+PATH_add ./bin/aliases
 PATH_add ./bin
 
 # Set magic variables for current file & dir
